@@ -1,0 +1,17 @@
+name: Code Coverage
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 0.*
+      - 1.*
+
+jobs:
+  coverage:
+    uses: mrgoodbytes8667/workflows/.github/workflows/code-coverage.yml@php8.1-8.2
+    with:
+      phpUnitVersion: 9.5
+      coverageType: xdebug

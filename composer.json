@@ -1,0 +1,35 @@
+{
+    "name": "mrgoodbytes8667/helpers",
+    "type": "library",
+    "description": "Package of helper functions and classes",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "laravel/helpers": "^1.2",
+        "symfony/string": "^6.2"
+    },
+    "require-dev": {
+        "rector/rector": "^0.14",
+        "symfony/test-pack": "^1.0.9"
+    },
+    "authors": [
+        {
+            "name": "MrGoodBytes",
+            "email": "bytes@mrgoodbytes.dev"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "conflict": {
+        "phpunit/phpunit": "<9.5",
+        "symfony/phpunit-bridge": "<6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bytes\\Helpers\\": "src/",
+            "Bytes\\Helpers\\Tests\\": "Tests/"
+        }
+    },
+    "minimum-stability": "dev"
+}

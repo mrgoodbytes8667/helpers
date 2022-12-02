@@ -1,0 +1,24 @@
+name: tests
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  pull_request:
+  workflow_dispatch:
+  repository_dispatch:
+  push:
+    branches:
+      - main
+      - 0.*
+      - 1.*
+  schedule:
+    # Weekly on Thursdays at 5am UTC
+    - cron:  '0 5 * * 4'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  test:
+    uses: mrgoodbytes8667/workflows/.github/workflows/run-tests.yml@php8.1-8.2
+    with:
+      phpUnitVersion: 9.5
+      failFast: false
